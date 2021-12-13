@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/functions.h
+
+C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/main.cpp
+iostream
+-
+fstream
+-
+algorithm
+-
+sstream
+-
+functions.h
+C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/functions.h
+

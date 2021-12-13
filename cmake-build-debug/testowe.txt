@@ -1,0 +1,13 @@
+10	%asdasdadsadadsads
+2	%asdsadasdasdadadsa
+%sdkadkladdakdsmakdaskdsads
+1.5 12.3 % punkt 1
+4 7.6 % punkt 2
+0.2 -0.9 % punkt 3
+0.0 0.0 % punkt 4
+-2.0 8.9 % punkt 5
+-0.5 3.9 % punkt 6
+10.5 10.5 % punkt 7
+-10 -10 % punkt 8
+6.4 3.9 % punkt 9
+1.5 21.37 % punkt 10

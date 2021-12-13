@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="projekt"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="msvc8"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\Michin\CLionProjects\8bf0f306-gr11-repo\projekt\cmake-build-debug\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Michin\CLionProjects\8bf0f306-gr11-repo\projekt\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Michin\CLionProjects\8bf0f306-gr11-repo\projekt\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Michin\CLionProjects\8bf0f306-gr11-repo\projekt\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="projekt">
+				<Option output="C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/cmake-build-debug/projekt.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\Michin\CLionProjects\8bf0f306-gr11-repo\projekt\cmake-build-debug\Makefile VERBOSE=1 projekt"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Michin\CLionProjects\8bf0f306-gr11-repo\projekt\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Michin\CLionProjects\8bf0f306-gr11-repo\projekt\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Michin\CLionProjects\8bf0f306-gr11-repo\projekt\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="projekt/fast">
+				<Option output="C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/cmake-build-debug/projekt.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\Michin\CLionProjects\8bf0f306-gr11-repo\projekt\cmake-build-debug\Makefile VERBOSE=1 projekt/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Michin\CLionProjects\8bf0f306-gr11-repo\projekt\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Michin\CLionProjects\8bf0f306-gr11-repo\projekt\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Michin\CLionProjects\8bf0f306-gr11-repo\projekt\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\Michin\CLionProjects\8bf0f306-gr11-repo\projekt\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Michin\CLionProjects\8bf0f306-gr11-repo\projekt\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Michin\CLionProjects\8bf0f306-gr11-repo\projekt\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Michin\CLionProjects\8bf0f306-gr11-repo\projekt\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\Michin\CLionProjects\8bf0f306-gr11-repo\projekt\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Michin\CLionProjects\8bf0f306-gr11-repo\projekt\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Michin\CLionProjects\8bf0f306-gr11-repo\projekt\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Michin\CLionProjects\8bf0f306-gr11-repo\projekt\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/functions.cpp">
+			<Option target="projekt"/>
+		</Unit>
+		<Unit filename="C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/functions.h">
+			<Option target="projekt"/>
+		</Unit>
+		<Unit filename="C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/main.cpp">
+			<Option target="projekt"/>
+		</Unit>
+		<Unit filename="C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -45,39 +45,43 @@ int dimensionsCounter(const string &address)
     return d;
 }
 
+
+
 #include "functions.h"
 
 int main(){
 
-    const int trainingPoints = trainingPointsCounter("treningowe.txt");
-    const int dimensions = dimensionsCounter("treningowe.txt");
-    cout<<trainingPoints<<" "<<dimensions<<endl;
-
-    auto * coordinates = new double[trainingPoints * dimensions];
+    int dimensions = dimensionsCounter("treningowe.txt");
+    int trainingPoints = trainingPointsCounter("treningowe.txt");
     string line;
     ifstream file;
-    double a;
+    auto**array = new double * [trainingPoints];
+    auto *raw = new double [trainingPoints * dimensions];
+    for(int i = 0; i<trainingPoints; i++)
+    {
+        array[i]=raw+i*dimensions;
+    }
+
     file.open("treningowe.txt");
+    int count=0;
+    for(int i = 0;i<4;i++)
+    {
+        file.ignore(256,'\n');
+    }
     while(getline(file, line))
     {
+
         istringstream iss(line);
-        if(iss>>a)
-        {
-            for(int i=0; i<trainingPoints; i++)
+            for(int i = 0;i<dimensions;i++)
             {
-
-                for(int j=0; j<dimensions; j++)
-                {
-                    coordinates[i * dimensions + j]=a;
-                }
+                iss>>array[count][i];
+                cout<<array[count][i]<<endl;
             }
-        }
+        count++;
     }
-    cout<<coordinates[dimensions * 0 + 0]<<" "<<coordinates[dimensions * 4 + 4]<<" "<<coordinates[dimensions * 19 + 4];
 
 
 
-
-    return 0;
-
+    //delete [] raw;
+    //delete [] array;
 };
