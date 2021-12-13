@@ -25,6 +25,23 @@ int trainingPointsCounter(const string &address)
     return t;
 }
 
+int testPointsCounter(const string &address)
+{
+    int a;
+    int t=0;
+    string line;
+    ifstream file;
+    file.open(address);
+    getline(file, line);
+    istringstream iss(line);
+    if(iss>>a)
+    {
+        t = a;
+    }
+    file.close();
+    return t;
+}
+
 int dimensionsCounter(const string &address)
 {
     int a;
@@ -45,6 +62,12 @@ int dimensionsCounter(const string &address)
     return d;
 }
 
+void fillTheArray(double arr[],const string &address)
+{
+
+
+}
+
 
 
 #include "functions.h"
@@ -53,13 +76,14 @@ int main(){
 
     int dimensions = dimensionsCounter("treningowe.txt");
     int trainingPoints = trainingPointsCounter("treningowe.txt");
+    int testPoints = testPointsCounter("testowe.txt");
     string line;
     ifstream file;
-    auto**array = new double * [trainingPoints];
-    auto *raw = new double [trainingPoints * dimensions];
+    auto**trainP = new double * [trainingPoints];
+    auto *rawTrain = new double [trainingPoints * dimensions];
     for(int i = 0; i<trainingPoints; i++)
     {
-        array[i]=raw+i*dimensions;
+        trainP[i]=rawTrain+i*dimensions;
     }
 
     file.open("treningowe.txt");
@@ -74,12 +98,11 @@ int main(){
         istringstream iss(line);
             for(int i = 0;i<dimensions;i++)
             {
-                iss>>array[count][i];
-                cout<<array[count][i]<<endl;
+                iss>>trainP[count][i];
+                cout<<trainP[count][i]<<endl;
             }
         count++;
     }
-
 
 
     //delete [] raw;
