@@ -1,0 +1,213 @@
+\hypertarget{functions_8cpp}{}\doxysection{functions.\+cpp File Reference}
+\label{functions_8cpp}\index{functions.cpp@{functions.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}functions.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{functions_8cpp_ae1a3e6784462d44c1b816e934eb7b76c}{arg\+Info}} (int \&argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, string \&address\+Train, string \&address\+Test, string \&address\+Out, int \&k)
+\item 
+int \mbox{\hyperlink{functions_8cpp_a0bc14091efab758aa1226a6a90f6c5e0}{arg\+Validate}} (const string \&address\+Test, const string \&address\+Train, const string \&address\+Out)
+\item 
+int \mbox{\hyperlink{functions_8cpp_a620e64990d643ea253a69e437e48631d}{additional\+Valid}} (int k, int training\+Amount)
+\item 
+void \mbox{\hyperlink{functions_8cpp_ac5381255b8901103ec92d3ae282b7a5f}{read\+Data}} (const string \&address\+Train, const string \&address\+Test, int \&dimensions, int \&training\+Amount, int \&test\+Amount, double $\ast$$\ast$\&training\+Points, double $\ast$$\ast$\&test\+Points, string $\ast$\&training\+Point\+Classes)
+\item 
+void \mbox{\hyperlink{functions_8cpp_ad92f0eb9bec5ae88be8b73fa7c078a23}{check\+Distances}} (double $\ast$$\ast$\&test\+Points, double $\ast$$\ast$\&training\+Points, double $\ast$$\ast$\&distances, int test\+Amount, int train\+Amount, int dimensions)
+\item 
+void \mbox{\hyperlink{functions_8cpp_ae5aa6e092406ad6fe2e4f89789afa9ce}{find\+Test\+Classes}} (map$<$ string, int $>$ \&classes, double $\ast$$\ast$\&distances, string $\ast$\&test\+Point\+Classes, string $\ast$\&training\+Point\+Classes, int test\+Amount, int k, int train\+Amount)
+\item 
+void \mbox{\hyperlink{functions_8cpp_a0f769f21a99dd21285503ba7fcc69332}{write\+To\+File}} (const string \&address, string $\ast$\&test\+Points\+Classes, double $\ast$$\ast$\&test\+Points, int test\+Amount, int dimensions)
+\item 
+void \mbox{\hyperlink{functions_8cpp_a5b9448b9554e308e2c8ad5dbfbafd620}{delete\+Tables}} (string $\ast$\&test\+Point\+Classes, string $\ast$\&training\+Point\+Classes, double $\ast$$\ast$\&test\+Points, double $\ast$$\ast$\&training\+Points, double $\ast$$\ast$\&distances)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+Zawiera instrukcje wszystkich funkcji programu.
+\mbox{\Hypertarget{functions_8cpp_a620e64990d643ea253a69e437e48631d}\label{functions_8cpp_a620e64990d643ea253a69e437e48631d}} 
+\index{functions.cpp@{functions.cpp}!additionalValid@{additionalValid}}
+\index{additionalValid@{additionalValid}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{additionalValid()}{additionalValid()}}
+{\footnotesize\ttfamily int additional\+Valid (\begin{DoxyParamCaption}\item[{int}]{k,  }\item[{int}]{training\+Amount }\end{DoxyParamCaption})}
+
+Dodatkowa walidacja argumentu k, który nie może być większy od ilości punktów treningowych
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & ilość k najbliższych sąsiadów \\
+\hline
+{\em training\+Amount} & ilość punktów treningowych \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zwraca błąd i kończy program jeśli k jest większe od ilości punktów treningowych 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8cpp_ae1a3e6784462d44c1b816e934eb7b76c}\label{functions_8cpp_ae1a3e6784462d44c1b816e934eb7b76c}} 
+\index{functions.cpp@{functions.cpp}!argInfo@{argInfo}}
+\index{argInfo@{argInfo}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{argInfo()}{argInfo()}}
+{\footnotesize\ttfamily int arg\+Info (\begin{DoxyParamCaption}\item[{int \&}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{string \&}]{address\+Train,  }\item[{string \&}]{address\+Test,  }\item[{string \&}]{address\+Out,  }\item[{int \&}]{k }\end{DoxyParamCaption})}
+
+Funkcja przyporządkowywuje wartości a tablicy argv odpowiednim zmiennym które będą używane w całym programie
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & ilość argumentów podanych przez użytkownika \\
+\hline
+{\em argv} & tablica z argumentami podanymi przez użytkownika \\
+\hline
+{\em address\+Train} & adres pliku z punktami treningowymi podany przez użytkownika \\
+\hline
+{\em address\+Test} & adres pliku z punktami testowymi podany przez użytkownika \\
+\hline
+{\em address\+Out} & adres pliku wyjściowego wybranego przez użytkownika \\
+\hline
+{\em k} & ilość najbliższych sąsiadów służąca do dalszej klasyfikacji \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+jeśli ilość argumentów jest odpowiednia to po wykonaniu funkcji zwrócone zostaną wypełnione zmienne, jeśli nie to funkcja zwróci błąd 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8cpp_a0bc14091efab758aa1226a6a90f6c5e0}\label{functions_8cpp_a0bc14091efab758aa1226a6a90f6c5e0}} 
+\index{functions.cpp@{functions.cpp}!argValidate@{argValidate}}
+\index{argValidate@{argValidate}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{argValidate()}{argValidate()}}
+{\footnotesize\ttfamily int arg\+Validate (\begin{DoxyParamCaption}\item[{const string \&}]{address\+Test,  }\item[{const string \&}]{address\+Train,  }\item[{const string \&}]{address\+Out }\end{DoxyParamCaption})}
+
+Funkcja odpowiada za prostą walidacje argumentów podanych przez użytkownika
+
+Sprawdza najczęstsze błędy związane z niepodaniem rozszerzenia pliku 
+\begin{DoxyParams}{Parameters}
+{\em address\+Test} & adres pliku z punktami testowymi \\
+\hline
+{\em address\+Train} & adres pliku z punktami treningowymi \\
+\hline
+{\em address\+Out} & adres pliku wyjściowego \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+funkcja kończy się bez błędu jeśli wszystkie pliki mają rozszerzenie txt, jeśli pojawia się błąd -\/ program przerywa się 
+\end{DoxyReturn}
+\mbox{\Hypertarget{functions_8cpp_ad92f0eb9bec5ae88be8b73fa7c078a23}\label{functions_8cpp_ad92f0eb9bec5ae88be8b73fa7c078a23}} 
+\index{functions.cpp@{functions.cpp}!checkDistances@{checkDistances}}
+\index{checkDistances@{checkDistances}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{checkDistances()}{checkDistances()}}
+{\footnotesize\ttfamily void check\+Distances (\begin{DoxyParamCaption}\item[{double $\ast$$\ast$\&}]{test\+Points,  }\item[{double $\ast$$\ast$\&}]{training\+Points,  }\item[{double $\ast$$\ast$\&}]{distances,  }\item[{int}]{test\+Amount,  }\item[{int}]{train\+Amount,  }\item[{int}]{dimensions }\end{DoxyParamCaption})}
+
+Funkcja sprawdza odległość każdego punktu testowego do każdego z punktów treningowych za pomocą metody euklidesowej
+
+Odległości zapisywane są do tablicy distances która ma wielkość ilość punktów testowych na ilość punktów treningowych 
+\begin{DoxyParams}{Parameters}
+{\em test\+Points} & tablica zawierająca współrzędne punktów testowych \\
+\hline
+{\em training\+Points} & tablica zawierające współrzędne punktów treningowych \\
+\hline
+{\em distances} & tablica zawierająca odległości kolejnych punktów testowych od każdego punktu treningowego \\
+\hline
+{\em test\+Amount} & ilość punktów testowych \\
+\hline
+{\em train\+Amount} & ilość punktów treningowych \\
+\hline
+{\em dimensions} & ilość wymiarów D \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8cpp_a5b9448b9554e308e2c8ad5dbfbafd620}\label{functions_8cpp_a5b9448b9554e308e2c8ad5dbfbafd620}} 
+\index{functions.cpp@{functions.cpp}!deleteTables@{deleteTables}}
+\index{deleteTables@{deleteTables}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{deleteTables()}{deleteTables()}}
+{\footnotesize\ttfamily void delete\+Tables (\begin{DoxyParamCaption}\item[{string $\ast$\&}]{test\+Point\+Classes,  }\item[{string $\ast$\&}]{training\+Point\+Classes,  }\item[{double $\ast$$\ast$\&}]{test\+Points,  }\item[{double $\ast$$\ast$\&}]{training\+Points,  }\item[{double $\ast$$\ast$\&}]{distances }\end{DoxyParamCaption})}
+
+Funkcja usuwa wszystkie tablice zaalokowane wcześniej dynamicznie
+
+
+\begin{DoxyParams}{Parameters}
+{\em test\+Point\+Classess} & tablica klas punktów testowych \\
+\hline
+{\em training\+Point\+Classess} & tablica klas punktów treningowych \\
+\hline
+{\em test\+Points} & talica współrzędnych punktów testowych \\
+\hline
+{\em training\+Points} & tablica współrzędnych punktów treningowych \\
+\hline
+{\em distances} & tablica dystansów kolejnych punktów testowych od wszystkich punktów treningowych \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8cpp_ae5aa6e092406ad6fe2e4f89789afa9ce}\label{functions_8cpp_ae5aa6e092406ad6fe2e4f89789afa9ce}} 
+\index{functions.cpp@{functions.cpp}!findTestClasses@{findTestClasses}}
+\index{findTestClasses@{findTestClasses}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{findTestClasses()}{findTestClasses()}}
+{\footnotesize\ttfamily void find\+Test\+Classes (\begin{DoxyParamCaption}\item[{map$<$ string, int $>$ \&}]{classes,  }\item[{double $\ast$$\ast$\&}]{distances,  }\item[{string $\ast$\&}]{test\+Point\+Classes,  }\item[{string $\ast$\&}]{training\+Point\+Classes,  }\item[{int}]{test\+Amount,  }\item[{int}]{k,  }\item[{int}]{train\+Amount }\end{DoxyParamCaption})}
+
+Funkcja wypełnia tablicę klas punktów testowych na podstawie k najbliższych puntków treningowych względem kolejnych punktów testowych, klasy zapisywane są do mapy classes
+
+Na podstawie ilości wystąpień wybranych klas, ta która ma największą wartość w mapie przyporządkowywana jest do wybranego punktu testowego 
+\begin{DoxyParams}{Parameters}
+{\em classes} & mapa do której zapisywane będą klasy k najbliższych punktów treningowych do kolejnych punktów testowych \\
+\hline
+{\em distances} & tablica odległości kolejnych punktów testowych od każdego punktu treningowego \\
+\hline
+{\em test\+Point\+Classes} & tablica klas punktów testowych, którą wypełnia ta funkcja \\
+\hline
+{\em training\+Point\+Classes} & tablica klas punktów treningowych \\
+\hline
+{\em test\+Amount} & ilość punktów testowych \\
+\hline
+{\em k} & liczba k najbliższych sąsiadów (w tym przypadku najbliższych, względem kolejnych punktów testowych, punktów treningowych) \\
+\hline
+{\em train\+Amount} & liczba punktów treningowych \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8cpp_ac5381255b8901103ec92d3ae282b7a5f}\label{functions_8cpp_ac5381255b8901103ec92d3ae282b7a5f}} 
+\index{functions.cpp@{functions.cpp}!readData@{readData}}
+\index{readData@{readData}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{readData()}{readData()}}
+{\footnotesize\ttfamily void read\+Data (\begin{DoxyParamCaption}\item[{const string \&}]{address\+Train,  }\item[{const string \&}]{address\+Test,  }\item[{int \&}]{dimensions,  }\item[{int \&}]{training\+Amount,  }\item[{int \&}]{test\+Amount,  }\item[{double $\ast$$\ast$\&}]{training\+Points,  }\item[{double $\ast$$\ast$\&}]{test\+Points,  }\item[{string $\ast$\&}]{training\+Point\+Classes }\end{DoxyParamCaption})}
+
+Funkcja zczytuje współrzędne punktów treningowych i testowych z odpowiednich plików
+
+Po zczytaniu danych zapisywane są one do odpowiednich tablic 
+\begin{DoxyParams}{Parameters}
+{\em address\+Train} & adres pliku z punktami treningowymi \\
+\hline
+{\em address\+Test} & adres pliku z punktami testowymi \\
+\hline
+{\em dimensions} & liczba wymiarów D w których zapisane są wszystkie punkty \\
+\hline
+{\em training\+Amount} & ilość punktów treningowych \\
+\hline
+{\em test\+Amount} & ilość punktów testowych \\
+\hline
+{\em training\+Points} & tablica D wymiarowa zawierająca współrzędne wszystkich punktów treningowych (training\+Amount x dimensions) \\
+\hline
+{\em test\+Points} & tablica D wymiarowa zawierająca współrzędne wszystkich punktów testowtch (test\+Amount x dimensions) \\
+\hline
+{\em training\+Point\+Classes} & tablica jednowymiarowa stringów zawierająca klasy punktów treningowych \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{functions_8cpp_a0f769f21a99dd21285503ba7fcc69332}\label{functions_8cpp_a0f769f21a99dd21285503ba7fcc69332}} 
+\index{functions.cpp@{functions.cpp}!writeToFile@{writeToFile}}
+\index{writeToFile@{writeToFile}!functions.cpp@{functions.cpp}}
+\doxysubsubsection{\texorpdfstring{writeToFile()}{writeToFile()}}
+{\footnotesize\ttfamily void write\+To\+File (\begin{DoxyParamCaption}\item[{const string \&}]{address,  }\item[{string $\ast$\&}]{test\+Points\+Classes,  }\item[{double $\ast$$\ast$\&}]{test\+Points,  }\item[{int}]{test\+Amount,  }\item[{int}]{dimensions }\end{DoxyParamCaption})}
+
+Funkcja wypisuje informacje do pliku w sposób podobny do pliku z punktami testowymi, lecz w tym wypadku każdemu z punktów przyporządkwywuje ona klase dobraną w wyniku funkcji \mbox{\hyperlink{functions_8cpp_ae5aa6e092406ad6fe2e4f89789afa9ce}{find\+Test\+Classes()}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & adres pliku do którego zostaną wypisane informacje \\
+\hline
+{\em test\+Points\+Classes} & tablica z klasami punktów testowych \\
+\hline
+{\em test\+Points} & tablica z współrzędnymi punktów testowych \\
+\hline
+{\em test\+Amount} & ilość punktów testowych \\
+\hline
+{\em dimensions} & ilość wymiarów D \\
+\hline
+\end{DoxyParams}

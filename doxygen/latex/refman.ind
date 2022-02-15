@@ -1,0 +1,68 @@
+\begin{theindex}
+
+  \item {additionalValid}
+    \subitem {functions.cpp}, \hyperpage{3}
+    \subitem {functions.h}, \hyperpage{8}
+  \item {argInfo}
+    \subitem {functions.cpp}, \hyperpage{4}
+    \subitem {functions.h}, \hyperpage{8}
+  \item {argValidate}
+    \subitem {functions.cpp}, \hyperpage{4}
+    \subitem {functions.h}, \hyperpage{9}
+
+  \indexspace
+
+  \item {checkDistances}
+    \subitem {functions.cpp}, \hyperpage{5}
+    \subitem {functions.h}, \hyperpage{9}
+
+  \indexspace
+
+  \item {deleteTables}
+    \subitem {functions.cpp}, \hyperpage{5}
+    \subitem {functions.h}, \hyperpage{10}
+
+  \indexspace
+
+  \item {findTestClasses}
+    \subitem {functions.cpp}, \hyperpage{6}
+    \subitem {functions.h}, \hyperpage{10}
+  \item {functions.cpp}, \hyperpage{3}
+    \subitem {additionalValid}, \hyperpage{3}
+    \subitem {argInfo}, \hyperpage{4}
+    \subitem {argValidate}, \hyperpage{4}
+    \subitem {checkDistances}, \hyperpage{5}
+    \subitem {deleteTables}, \hyperpage{5}
+    \subitem {findTestClasses}, \hyperpage{6}
+    \subitem {readData}, \hyperpage{6}
+    \subitem {writeToFile}, \hyperpage{7}
+  \item {functions.h}, \hyperpage{7}
+    \subitem {additionalValid}, \hyperpage{8}
+    \subitem {argInfo}, \hyperpage{8}
+    \subitem {argValidate}, \hyperpage{9}
+    \subitem {checkDistances}, \hyperpage{9}
+    \subitem {deleteTables}, \hyperpage{10}
+    \subitem {findTestClasses}, \hyperpage{10}
+    \subitem {readData}, \hyperpage{11}
+    \subitem {writeToFile}, \hyperpage{12}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{13}
+  \item {main.cpp}, \hyperpage{12}
+    \subitem {main}, \hyperpage{13}
+
+  \indexspace
+
+  \item {readData}
+    \subitem {functions.cpp}, \hyperpage{6}
+    \subitem {functions.h}, \hyperpage{11}
+
+  \indexspace
+
+  \item {writeToFile}
+    \subitem {functions.cpp}, \hyperpage{7}
+    \subitem {functions.h}, \hyperpage{12}
+
+\end{theindex}

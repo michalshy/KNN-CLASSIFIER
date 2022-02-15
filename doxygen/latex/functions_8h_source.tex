@@ -1,0 +1,26 @@
+\hypertarget{functions_8h_source}{}\doxysection{functions.\+h}
+\mbox{\hyperlink{functions_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{comment}{//}}
+\DoxyCodeLine{3 \textcolor{comment}{// Created by Michin on 28.11.2021.}}
+\DoxyCodeLine{4 \textcolor{comment}{//}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef PROJEKT\_FUNCTIONS\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define PROJEKT\_FUNCTIONS\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{12 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{23 \textcolor{keywordtype}{int} \mbox{\hyperlink{functions_8h_ae1a3e6784462d44c1b816e934eb7b76c}{argInfo}}(\textcolor{keywordtype}{int} \&argc, \textcolor{keywordtype}{char} * argv[], \textcolor{keywordtype}{string} \&addressTrain, \textcolor{keywordtype}{string} \&addressTest, \textcolor{keywordtype}{string} \&addressOut, \textcolor{keywordtype}{int} \&k);}
+\DoxyCodeLine{32 \textcolor{keywordtype}{int} \mbox{\hyperlink{functions_8h_a0bc14091efab758aa1226a6a90f6c5e0}{argValidate}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&addressTest,\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&addressTrain, \textcolor{keyword}{const} \textcolor{keywordtype}{string} \&addressOut);}
+\DoxyCodeLine{39 \textcolor{keywordtype}{int} \mbox{\hyperlink{functions_8h_a620e64990d643ea253a69e437e48631d}{additionalValid}}(\textcolor{keywordtype}{int} k, \textcolor{keywordtype}{int} trainingAmount);}
+\DoxyCodeLine{52 \textcolor{keywordtype}{void} \mbox{\hyperlink{functions_8h_ac5381255b8901103ec92d3ae282b7a5f}{readData}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&addressTrain, \textcolor{keyword}{const} \textcolor{keywordtype}{string} \&addressTest, \textcolor{keywordtype}{int} \&dimensions, \textcolor{keywordtype}{int} \&trainingAmount, \textcolor{keywordtype}{int} \&testAmount, \textcolor{keywordtype}{double} ** \&trainingPoints, \textcolor{keywordtype}{double} ** \&testPoints, \textcolor{keywordtype}{string} * \&trainingPointClasses);}
+\DoxyCodeLine{63 \textcolor{keywordtype}{void} \mbox{\hyperlink{functions_8h_ad92f0eb9bec5ae88be8b73fa7c078a23}{checkDistances}}(\textcolor{keywordtype}{double} ** \&testPoints, \textcolor{keywordtype}{double} ** \&trainingPoints, \textcolor{keywordtype}{double} ** \&distances, \textcolor{keywordtype}{int} testAmount, \textcolor{keywordtype}{int} trainAmount, \textcolor{keywordtype}{int} dimensions);}
+\DoxyCodeLine{75 \textcolor{keywordtype}{void} \mbox{\hyperlink{functions_8h_ae5aa6e092406ad6fe2e4f89789afa9ce}{findTestClasses}}(map<string, int> \&classes, \textcolor{keywordtype}{double} ** \&distances, \textcolor{keywordtype}{string} * \&testPointClasses, \textcolor{keywordtype}{string} * \&trainingPointClasses, \textcolor{keywordtype}{int} testAmount, \textcolor{keywordtype}{int} k, \textcolor{keywordtype}{int} trainAmount);}
+\DoxyCodeLine{84 \textcolor{keywordtype}{void} \mbox{\hyperlink{functions_8h_a0f769f21a99dd21285503ba7fcc69332}{writeToFile}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&address, \textcolor{keywordtype}{string} * \&testPointsClasses, \textcolor{keywordtype}{double} ** \&testPoints, \textcolor{keywordtype}{int} testAmount, \textcolor{keywordtype}{int} dimensions);}
+\DoxyCodeLine{93 \textcolor{keywordtype}{void} \mbox{\hyperlink{functions_8h_a5b9448b9554e308e2c8ad5dbfbafd620}{deleteTables}}(\textcolor{keywordtype}{string} * \&testPointClasses, \textcolor{keywordtype}{string} * \&trainingPointClasses, \textcolor{keywordtype}{double} ** \&testPoints, \textcolor{keywordtype}{double} ** \&trainingPoints, \textcolor{keywordtype}{double} ** \&distances);}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJEKT\_FUNCTIONS\_H}}
+
+\end{DoxyCode}

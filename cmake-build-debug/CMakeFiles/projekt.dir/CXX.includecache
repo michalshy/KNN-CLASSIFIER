@@ -6,9 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/functions.h
-
-C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/main.cpp
+C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/functions.cpp
 iostream
 -
 fstream
@@ -17,6 +15,22 @@ algorithm
 -
 sstream
 -
+map
+-
+vector
+-
 functions.h
 C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/functions.h
+
+C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/functions.h
+iostream
+-
+fstream
+-
+algorithm
+-
+sstream
+-
+map
+-
 

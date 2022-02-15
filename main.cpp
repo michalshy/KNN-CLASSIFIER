@@ -1,110 +1,35 @@
+/**@file*/
 //
 // Created by Michin on 28.11.1584.
 //
-
 #include <iostream>
 #include <fstream>
 #include <algorithm>
 #include <sstream>
+#include <map>
 using namespace std;
-
-int trainingPointsCounter(const string &address)
-{
-    int a;
-    int t=0;
-    string line;
-    ifstream file;
-    file.open(address);
-    getline(file, line);
-    istringstream iss(line);
-    if(iss>>a && line.back()=='N')
-    {
-        t = a;
-    }
-    file.close();
-    return t;
-}
-
-int testPointsCounter(const string &address)
-{
-    int a;
-    int t=0;
-    string line;
-    ifstream file;
-    file.open(address);
-    getline(file, line);
-    istringstream iss(line);
-    if(iss>>a)
-    {
-        t = a;
-    }
-    file.close();
-    return t;
-}
-
-int dimensionsCounter(const string &address)
-{
-    int a;
-    int d=0;
-    string line;
-    ifstream file;
-    file.open(address);
-    while(getline(file, line))
-    {
-        istringstream iss(line);
-        if(iss>>a && line.back()=='D')
-        {
-            d = a;
-        }
-    }
-
-    file.close();
-    return d;
-}
-
-void fillTheArray(double arr[],const string &address)
-{
-
-
-}
-
-
-
 #include "functions.h"
-
-int main(){
-
-    int dimensions = dimensionsCounter("treningowe.txt");
-    int trainingPoints = trainingPointsCounter("treningowe.txt");
-    int testPoints = testPointsCounter("testowe.txt");
-    string line;
-    ifstream file;
-    auto**trainP = new double * [trainingPoints];
-    auto *rawTrain = new double [trainingPoints * dimensions];
-    for(int i = 0; i<trainingPoints; i++)
-    {
-        trainP[i]=rawTrain+i*dimensions;
-    }
-
-    file.open("treningowe.txt");
-    int count=0;
-    for(int i = 0;i<4;i++)
-    {
-        file.ignore(256,'\n');
-    }
-    while(getline(file, line))
-    {
-
-        istringstream iss(line);
-            for(int i = 0;i<dimensions;i++)
-            {
-                iss>>trainP[count][i];
-                cout<<trainP[count][i]<<endl;
-            }
-        count++;
-    }
-
-
-    //delete [] raw;
-    //delete [] array;
+/** Główna funkcja programu
+ *
+ * @param argc ilość argumentów podanych przez użytkownika
+ * @param argv tablica z argumentami
+ */
+int main(int argc, char *argv[]){
+    int k;
+    string addressOut, addressTrain, addressTest;
+    if(argInfo(argc, argv, addressTrain, addressTest, addressOut, k)) return 1;
+    if(argValidate(addressTest, addressTrain, addressOut)) return 1;
+    int dimensions, trainingAmount, testAmount;
+    double ** trainingPoints;
+    double ** testPoints;
+    double ** distances;
+    string * trainingPointClasses;
+    map<string, int> classes;
+    string * testPointClasses;
+    readData(addressTrain, addressTest, dimensions, trainingAmount, testAmount, trainingPoints, testPoints, trainingPointClasses);
+    additionalValid(k, trainingAmount);
+    checkDistances(testPoints, trainingPoints, distances, testAmount, trainingAmount, dimensions);
+    findTestClasses(classes, distances, testPointClasses, trainingPointClasses, testAmount, k, trainingAmount);
+    writeToFile(addressOut, testPointClasses, testPoints, testAmount, dimensions);
+    deleteTables(testPointClasses, trainingPointClasses, testPoints, trainingPoints, distances);
 };
