@@ -1,0 +1,12 @@
+10 % liczba punktów treningowych
+2 % liczba wymiarów D
+1.0 0.0 zielony %punkt 1
+3.0 0.0 zielony
+2.0 -1.0 zielony
+3.0 1.0 zielony
+3.0 2.0 zielony
+4.0 0.0 zielony
+-2.0 0.0 niebieski
+-2.0 1.0 niebieski
+-2.0 -1.0 niebieski
+-3.0 0.0 niebieski
