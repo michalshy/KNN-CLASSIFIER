@@ -1,3 +1,0 @@
-C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/cmake-build-debug/CMakeFiles/projekt.dir
-C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Michin/CLionProjects/8bf0f306-gr11-repo/projekt/cmake-build-debug/CMakeFiles/rebuild_cache.dir

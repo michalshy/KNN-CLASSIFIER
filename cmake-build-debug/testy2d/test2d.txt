@@ -1,3 +1,0 @@
-1 % liczba punktów testowych
-2 % liczba wymiarów
-0.0 0.0 %punkt 1
